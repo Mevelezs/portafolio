@@ -1,11 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/logos/LinkedIn.astro";
+import SliderTech from '../components/SliderTech.astro'
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		
-	</main>
-</Layout>
+<Layout title='Welcome to Astro.'>
+  <main>
+    <section class='w-full lg:w-[740px] mx-auto py-44'>
+      <h1 class='text-white text-4xl font-bold flex flex-row gap-x-4 pb-5'>
+        Hey soy Mauricio <a
+          href='https://www.linkedin.com/in/mauricio-velez-solis/'
+          target='_blank'
+          rel='noopener'
+          class='flex justify-center items-center'
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class='text-lg'>
+        <span class='text-fuchsia-400'>Desarrollador full stack web...</span>
+        <span class='text-zinc-100'
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+          molestiae voluptate eius doloribus, rem officiis nostrum et explicabo,
+          delectus tempora pariatur adipisci deleniti vero cupiditate maxime vel
+          fuga culpa excepturi?</span>
+      </h2>
 
+      <ul>
+        <li>
+          <a
+            href='https://www.linkedin.com/in/mauricio-velez-solis/'
+            target='_blank'
+            rel='noopener'
+          >
+            <LinkedIn class='h-6 w-6' />
+            LinkedIn
+          </a>
+        </li>
+        <li><a href=''></a></li>
+        <li><a href=''></a></li>
+      </ul>
+      
+      <SliderTech />
+    </section>
+  </main>
+</Layout>
