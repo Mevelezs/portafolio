@@ -1,15 +1,26 @@
 ---
 import Badge from "../components/Badge.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SliderTech from "../components/SliderTech.astro";
+import SocialPill from "../components/SocialPill.astro";
+import BriefCase from "../components/logos/BriefCase.astro";
+import Github from "../components/logos/Github.astro";
 import LinkedIn from "../components/logos/LinkedIn.astro";
-import SliderTech from '../components/SliderTech.astro'
+import Mail from "../components/logos/Mail.astro";
+
+import Code from "../components/logos/Code.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout
+  title='Portfolio de Mauricio Vélez - Full Stack Web Developer'
+  description='Mauricio Vélez es un full stack web developer con experiencia en desarrollo full stack con con pasión por el back-end. Especializado en crear aplicaciones de gran calidad.'
+>
   <main>
-    <section class='w-full lg:w-[740px] mx-auto py-44'>
-      <h1 class='text-white text-4xl font-bold flex flex-row gap-x-4 pb-5'>
-        Hey soy Mauricio <a
+    <SectionContainer class='py-80 pb-28'>
+      <h1 class='text-white text-3xl font-bold flex flex-row gap-x-4 pb-5'>
+        Hey, soy Mauricio <a
           href='https://www.linkedin.com/in/mauricio-velez-solis/'
           target='_blank'
           rel='noopener'
@@ -17,31 +28,46 @@ import Layout from "../layouts/Layout.astro";
           ><Badge>Disponible para trabajar</Badge></a
         >
       </h1>
-      <h2 class='text-lg'>
+      <h2 class='text-[18px]'>
         <span class='text-fuchsia-400'>Desarrollador full stack web...</span>
         <span class='text-zinc-100'
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
           molestiae voluptate eius doloribus, rem officiis nostrum et explicabo,
           delectus tempora pariatur adipisci deleniti vero cupiditate maxime vel
-          fuga culpa excepturi?</span>
+          fuga culpa excepturi?</span
+        >
       </h2>
 
-      <ul>
-        <li>
-          <a
-            href='https://www.linkedin.com/in/mauricio-velez-solis/'
-            target='_blank'
-            rel='noopener'
-          >
-            <LinkedIn class='h-6 w-6' />
-            LinkedIn
-          </a>
-        </li>
-        <li><a href=''></a></li>
-        <li><a href=''></a></li>
-      </ul>
-      
-      <SliderTech />
-    </section>
+      <nav class='flex gap-x-3 mt-8'>
+        <SocialPill href='https://www.linkedin.com/in/mauricio-velez-solis/'>
+          <LinkedIn class='size-4' />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href='https://github.com/mevelezs'>
+          <Github class='size-4' />
+          GitHub
+        </SocialPill>
+        <SocialPill href='mailto:serketh7@gmail.com'>
+          <Mail class='size-5' />
+          serketh7@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id='experiencia'>
+      <h2 class='text-xl font-semibold mb-4 flex gap-x-3'>
+        <BriefCase />
+        Experiencia
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id='proyectos' class="mt-20 mb-20">
+      <h2 class='text-xl font-semibold mb-4 flex gap-x-3'>
+        <Code class = "size-7"/>
+        Proyectos
+      </h2>
+    </SectionContainer>
+    <SliderTech />
   </main>
 </Layout>

@@ -4,24 +4,25 @@
 
 <header
   id="landing-header" 
-  class='flex items-center fixed top-0 py-6 px-10 w-full justify-around'
+  class='flex items-center bg-black/80 fixed top-0 py-4 px-24  w-full justify-around'
   >
   <img 
-    class = "rounded-full w-12 h-12 object-cover"
+    class = "rounded-full size-10 object-cover"
     src='https://avatars.githubusercontent.com/u/91708303?s=400&u=96e991a305db44cfc60a443ff9e7a03c7c53f6cb&v=4' alt='This is the image of Mauricio' />
   <nav>
     <ul class='flex text-md font-semibold opacity-90 [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4'>
-      <li><a href='#'>Home</a></li>
-      <li><a href='#'>Projects</a></li>
-      <li><a href='#'>About</a></li>
-      <li><a href='#'>Contact</a></li>
+      <li><a href='#top'>Inicio</a></li>
+      <li><a href='#experiencia'>Experiencia</a></li>
+      <li><a href='#proyectos'>Proyectos</a></li>
+      <li><a href='#sobreMí'>Sobre mí</a></li>
+      <li><a href='#contacto'>Contacto</a></li>
     </ul>
   </nav>
 
   <div
     id='menu-backdrop'
     class={`
-      absolute bg-white/5 backdrop-blur-lg rounded-md
+      absolute [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] backdrop-blur-lg rounded-md
       translate-x-[var(--left)] 
       translate-y-[var(--top)] left-0 top-0
       w-[var(--width)] h-[var(--height)] 

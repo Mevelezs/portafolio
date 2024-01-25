@@ -3,24 +3,28 @@ import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description} = Astro.props;
 ---
 
 <!doctype html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
+    <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body >
-    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-    
+  <body>
+    <div
+      class='absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'
+    >
+    </div>
+
     <Header />
     <slot />
   </body>
@@ -33,12 +37,20 @@ const { title } = Astro.props;
 
   html {
     font-family: "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
     background: rgb(73, 6, 136);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    justify-content: center;
+
   }
+  @media (prefers-reduced-motion: reduce){
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
 </style>
