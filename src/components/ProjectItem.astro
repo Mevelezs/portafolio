@@ -1,0 +1,40 @@
+---
+const PROJECT_CONTENT = [
+  {
+    id: 1,
+    name: "Project One",
+    description: "This is the first project.",
+    image: "/foto.jpg",
+  },
+  {
+    id: 1,
+    name: "Project One",
+    description: "This is the first project.",
+    image: "/foto.jpg",
+    
+  },
+  {
+    id: 1,
+    name: "Project One",
+    description: "This is the first project.",
+    image: "/foto.jpg",
+  },
+   {
+    id: 1,
+    name: "Project One",
+    description: "This is the first project.",
+    image: "/foto.jpg",
+  },
+];
+---
+
+{
+  PROJECT_CONTENT.map(({ name, description, image }) => (
+    <article class='border-solid h-96 bg-black rounded-xl'>
+
+      <img class='h-1/3 w-full object-cover rounded-t-xl' src={image} />
+      <h2>{name}</h2>
+      <p>{description}</p>
+    </article>
+  ))
+}

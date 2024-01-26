@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        'GC': 'repeat(auto-fit, minmax(250px, 1fr))',
+      },
       animation: {
         "infinite-scroll": "infinite-scroll 30s linear infinite",
 			},
