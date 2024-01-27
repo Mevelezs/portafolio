@@ -4,17 +4,18 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'GC': 'repeat(auto-fit, minmax(250px, 1fr))',
+        GC: "repeat(auto-fit, minmax(250px, 1fr))",
+        IC: "repeat(auto-fit, minmax(90px, 1fr))",
       },
       animation: {
         "infinite-scroll": "infinite-scroll 30s linear infinite",
-			},
-			keyframes: {
-				'infinite-scroll': {
-					from: { transform: 'translateX(0)' },
-					to: { transform: 'translateX(-100%)' },
-				}
-			}	 
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [],

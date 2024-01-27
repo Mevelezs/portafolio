@@ -1,40 +1,87 @@
 ---
+import JavaScript from "./logosTech/JavaScript.astro";
+import Nextjs from "./logosTech/Nextjs.astro";
+import React from "./logosTech/React.astro";
+
+const TAGS = {
+
+  React: {
+    name: "React.js",
+    class: "bg-black/20",
+    linkGithib:'link.link',
+    url:'sdvadv',
+    icon: React,
+  },
+  JavaScript: {
+    name: "JavaScript",
+    class: "bg-black/20",
+    icon: JavaScript,
+  },
+  Nextjs: {
+    name: "Next.js",
+    class: "bg-black/20",
+    icon: Nextjs,
+  },
+};
 const PROJECT_CONTENT = [
   {
     id: 1,
     name: "Project One",
-    description: "This is the first project.",
+    description: "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
     image: "/foto.jpg",
-  },
-  {
-    id: 1,
-    name: "Project One",
-    description: "This is the first project.",
-    image: "/foto.jpg",
-    
-  },
-  {
-    id: 1,
-    name: "Project One",
-    description: "This is the first project.",
-    image: "/foto.jpg",
+    links: [],
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.Nextjs,TAGS.React, TAGS.JavaScript, TAGS.Nextjs],
   },
    {
     id: 1,
     name: "Project One",
-    description: "This is the first project.",
+    description: "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
     image: "/foto.jpg",
+    link: "link",
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.Nextjs,TAGS.React, TAGS.JavaScript, TAGS.Nextjs],
+  },
+   {
+    id: 1,
+    name: "Project One",
+    description: "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
+    image: "/foto.jpg",
+    link: "link",
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.Nextjs,TAGS.React, TAGS.JavaScript, TAGS.Nextjs],
+  },
+   {
+    id: 1,
+    name: "Project One",
+    description: "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
+    image: "/foto.jpg",
+    link: "link",
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.Nextjs,TAGS.React, TAGS.JavaScript, TAGS.Nextjs],
   },
 ];
 ---
 
 {
-  PROJECT_CONTENT.map(({ name, description, image }) => (
-    <article class='border-solid h-96 bg-black rounded-xl'>
-
-      <img class='h-1/3 w-full object-cover rounded-t-xl' src={image} />
-      <h2>{name}</h2>
-      <p>{description}</p>
+  PROJECT_CONTENT.map(({ name, description, image, tags }) => (
+    <article class='border-solid max-h-[350px] border border-sky-500 rounded-xl'>
+      <h3 class='text-xl font-semibold m-2'>{name}</h3>
+      <p class='text-sm  m-2 text-pretty'>{description}</p>
+      <img
+        loading="lazy"
+        class='h-36 w-full shadow-2xl p-4 shadow-white/20 object-cover rounded-xl'
+        src={image}
+        alt=""
+      />
+      <ul class="grid grid-cols-IC gap-x-2 mt-1">
+        {
+          tags?.map((tag) => (
+            <li class="flex items-center mb-1">
+              <span class={`flex gap-x-2 ml-2 rounded-full text-xs py-1 px-2 ${tag.class}`}>
+                <tag.icon class='size-4 rounded-full' />
+                {tag.name}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
     </article>
   ))
 }

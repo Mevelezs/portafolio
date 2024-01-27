@@ -1,22 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import AboutMe from "../components/About.astro"
-import Badge from "../components/Badge.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro"
-import SectionContainer from "../components/SectionContainer.astro";
-import SliderTech from "../components/SliderTech.astro";
-import SocialPill from "../components/SocialPill.astro";
+import AboutMe from "@/components/About.astro";
+import Badge from "@/components/Badge.astro";
+import Experience from "@/components/Experience.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SliderTech from "@/components/SliderTech.astro";
+import SocialPill from "@/components/SocialPill.astro";
 
-import Code from "../components/icons/Code.astro";
-import BriefCase from "../components/icons/BriefCase.astro";
-import Github from "../components/icons/Github.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import Mail from "../components/icons/Mail.astro";
-import Profile from "../components/icons/Profile.astro";
-
-
+import BriefCase from "@/components/icons/BriefCase.astro";
+import Code from "@/components/icons/Code.astro";
+import Github from "@/components/icons/Github.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import Mail from "@/components/icons/Mail.astro";
+import Profile from "@/components/icons/Profile.astro";
 ---
 
 <Layout
@@ -24,8 +22,8 @@ import Profile from "../components/icons/Profile.astro";
   description='Mauricio Vélez es un full stack web developer con experiencia en desarrollo full stack con con pasión por el back-end. Especializado en crear aplicaciones de gran calidad.'
 >
   <main>
-    <SectionContainer class='py-60 pb-10'>
-      <h1 class='text-white text-3xl font-bold flex flex-row gap-x-4 pb-5'>
+    <SectionContainer class='mt-64'>
+      <h1 class='text-white text-3xl font-bold flex flex-row gap-x-4 pb-8'>
         Hey, soy Mauricio <a
           href='https://www.linkedin.com/in/mauricio-velez-solis/'
           target='_blank'
@@ -35,7 +33,7 @@ import Profile from "../components/icons/Profile.astro";
         >
       </h1>
       <h2 class='text-[18px]'>
-        <span class='text-fuchsia-400'>Desarrollador full stack web...</span>
+        <span class='text-fuchsia-400'>Desarrollador full stack web@.</span>
         <span class='text-zinc-100'
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
           molestiae voluptate eius doloribus, rem officiis nostrum et explicabo,
@@ -44,7 +42,7 @@ import Profile from "../components/icons/Profile.astro";
         >
       </h2>
 
-      <nav class='flex gap-x-3 mt-8'>
+      <nav class='flex gap-x-3 mt-10'>
         <SocialPill href='https://www.linkedin.com/in/mauricio-velez-solis/'>
           <LinkedIn class='size-4' />
           LinkedIn
@@ -58,34 +56,32 @@ import Profile from "../components/icons/Profile.astro";
           serketh7@gmail.com
         </SocialPill>
       </nav>
+      <SliderTech />
     </SectionContainer>
-
-    <SectionContainer id='experiencia'>
-      <h2 class='text-xl font-semibold mb-4 flex gap-x-3'>
+    <SectionContainer id='experiencia' class='py-20'>
+      <h2 class='text-xl font-semibold mb-2 flex gap-x-3'>
         <BriefCase />
         Experiencia
       </h2>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id='proyectos' class="mt-10 mb-20">
+    <SectionContainer id='proyectos' class='mt-64 py-20'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
-        <Code class = "size-7"/>
+        <Code class='size-7' />
         Proyectos
       </h2>
-      <Projects/>
+      <Projects>
+        <slot />
+      </Projects>
     </SectionContainer>
 
-    <SectionContainer id='sobre-mí' class="mt-60 mb-20">
+    <SectionContainer id='sobre-mí' class='mt-64 py-20'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
-        <Profile class = "size-6"/>
+        <Profile class='size-6' />
         Sobre Mí
       </h2>
       <AboutMe />
     </SectionContainer>
-
   </main>
-  <footer>
-    <SliderTech />
-  </footer>
 </Layout>
