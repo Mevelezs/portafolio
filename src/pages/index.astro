@@ -11,6 +11,7 @@ import SocialPill from "@/components/SocialPill.astro";
 
 import BriefCase from "@/components/icons/BriefCase.astro";
 import Code from "@/components/icons/Code.astro";
+import Curriculum from "@/components/icons/Curriculum.astro";
 import Github from "@/components/icons/Github.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
 import Mail from "@/components/icons/Mail.astro";
@@ -55,10 +56,15 @@ import Profile from "@/components/icons/Profile.astro";
           <Mail class='size-5' />
           serketh7@gmail.com
         </SocialPill>
+         <SocialPill href='./me.jpeg' download = 'CV_Mauricio_Vélez'>
+          <Curriculum class='size-5' />
+          Descargar CV
+        </SocialPill>
       </nav>
       <SliderTech />
     </SectionContainer>
-    <SectionContainer id='experiencia' class='py-20'>
+
+    <SectionContainer id='experiencia' class='py-20 h-[400px]'>
       <h2 class='text-xl font-semibold mb-2 flex gap-x-3'>
         <BriefCase />
         Experiencia
@@ -66,7 +72,7 @@ import Profile from "@/components/icons/Profile.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id='proyectos' class='mt-64 py-20'>
+    <SectionContainer id='proyectos' class='mt-72 py-20'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Code class='size-7' />
         Proyectos
@@ -76,7 +82,7 @@ import Profile from "@/components/icons/Profile.astro";
       </Projects>
     </SectionContainer>
 
-    <SectionContainer id='sobre-mí' class='mt-64 py-20'>
+    <SectionContainer id='sobre-mí' class='mt-96 mb-16 py-20'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Profile class='size-6' />
         Sobre Mí
