@@ -1,0 +1,24 @@
+---
+import Badge from "./Badge.astro";
+---
+
+<section
+  class='flex justify-center w-full bg-black/70 border border-stone-600 hover:border-violet-600 rounded-xl mb-10'
+>
+  <form
+    class='flex flex-col bg-transparent'
+    action='https://formspree.io/f/mrgvdbbp'
+    method='POST'
+  >
+    <label class=" text-base font-semibold mt-6 mb-1 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Nombre:</label>
+    <input type='text' name='nombre' class='bg-transparent mb-2 border border-stone-600 outline-none h-10 rounded-lg text-center hover:border-lime-900' />
+    
+    <label class=" text-base font-semibold mt-2 mb-1 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Email:</label>
+    <input type='text' name='email' class='bg-transparent mb-2 border border-stone-600 outline-none h-10 rounded-lg text-center hover:border-lime-900' />
+
+    <label class=" text-base font-semibold mt-2 mb-1 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Mensaje:</label>
+    <textarea name='message' cols='30' rows='10' class='bg-transparent mb-2 border border-stone-600 outline-none rounded-lg text-start p-2 hover:border-lime-900'></textarea>
+    
+    <button class="mb-2 mt-3"><Badge><p class= "bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Enviar</p></Badge></button>
+  </form>
+</section>

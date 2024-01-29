@@ -11,6 +11,7 @@ import SocialPill from "@/components/SocialPill.astro";
 
 import BriefCase from "@/components/icons/BriefCase.astro";
 import Code from "@/components/icons/Code.astro";
+import Contact from "@/components/Contact.astro"
 import Curriculum from "@/components/icons/Curriculum.astro";
 import Github from "@/components/icons/Github.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
@@ -64,7 +65,7 @@ import Profile from "@/components/icons/Profile.astro";
       <SliderTech />
     </SectionContainer>
 
-    <SectionContainer id='experiencia' class='py-20 h-[400px]'>
+    <SectionContainer id='experiencia' class='py-20 '>
       <h2 class='text-xl font-semibold mb-2 flex gap-x-3'>
         <BriefCase />
         Experiencia
@@ -72,7 +73,7 @@ import Profile from "@/components/icons/Profile.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id='proyectos' class='mt-72 py-20'>
+    <SectionContainer id='proyectos' class='mt-20 py-20'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Code class='size-7' />
         Proyectos
@@ -82,12 +83,19 @@ import Profile from "@/components/icons/Profile.astro";
       </Projects>
     </SectionContainer>
 
-    <SectionContainer id='sobre-mí' class='mt-96 mb-16 py-20'>
+    <SectionContainer id='sobre-mi' class='mt-96 mb-16 py-20'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Profile class='size-6' />
         Sobre Mí
       </h2>
       <AboutMe />
+    </SectionContainer>
+    <SectionContainer id='contacto' class='mt-20 mb-16 py-20'>
+      <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
+        <Mail class='size-6' />
+        Contacto
+      </h2>
+      <Contact />
     </SectionContainer>
   </main>
 </Layout>

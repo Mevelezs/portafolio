@@ -9,11 +9,20 @@ export default {
       },
       animation: {
         "infinite-scroll": "infinite-scroll 30s linear infinite",
+        "background-shine": "background-shine 2s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
+        },
+        "background-shine": {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
         },
       },
     },
