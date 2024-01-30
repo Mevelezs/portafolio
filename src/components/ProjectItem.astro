@@ -4,26 +4,26 @@ import Web from "./icons/Web.astro";
 import JavaScript from "./logosTech/JavaScript.astro";
 import Nextjs from "./logosTech/Nextjs.astro";
 import React from "./logosTech/React.astro";
+
 const DATA_LINKS = {
   project_1: {
     nameWeb: "Ir al sitio web",
-    github: "https://github.com",
+    github: "https://github.com/Grupo5Henry",
     icon: Github,
-    url: "link",
+    url: "https://front-wheat-gamma.vercel.app",
     iconWeb: Web,
-    class: "bg-black/20"
-    
+    class: "bg-black/20",
   },
 };
 const TAGS = {
   React: {
     name: "React.js",
-    class: "bg-black/20",
+    class: "bg-gray-900",
     icon: React,
   },
   JavaScript: {
     name: "JavaScript",
-    class: "bg-black/20",
+    class: "bg-gray-900",
     icon: JavaScript,
   },
   Nextjs: {
@@ -40,12 +40,7 @@ const PROJECT_CONTENT = [
       "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
     image: "/foto.jpg",
     links: DATA_LINKS.project_1,
-    tags: [
-      TAGS.React,
-      TAGS.JavaScript,
-      TAGS.React,
-      TAGS.JavaScript,
-    ],
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
   },
   {
     id: 1,
@@ -53,12 +48,7 @@ const PROJECT_CONTENT = [
     description:
       "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
     image: "/foto.jpg",
-    tags: [
-      TAGS.React,
-      TAGS.JavaScript,
-      TAGS.React,
-      TAGS.JavaScript,
-    ],
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
   },
   {
     id: 1,
@@ -66,12 +56,7 @@ const PROJECT_CONTENT = [
     description:
       "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
     image: "/foto.jpg",
-    tags: [
-      TAGS.React,
-      TAGS.JavaScript,
-      TAGS.React,
-      TAGS.JavaScript,
-    ],
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
   },
   {
     id: 1,
@@ -79,12 +64,7 @@ const PROJECT_CONTENT = [
     description:
       "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
     image: "/foto.jpg",
-    tags: [
-      TAGS.React,
-      TAGS.JavaScript,
-      TAGS.React,
-      TAGS.JavaScript,
-    ],
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
   },
 ];
 ---
@@ -108,34 +88,34 @@ const PROJECT_CONTENT = [
       </ul>
       <img
         loading='lazy'
-        class='h-40 w-full shadow-2xl p-2 shadow-white/20 object-cover rounded-xl hover:scale-110 transition-transform'
+        class='h-40 w-full  shadow-2xl p-2 shadow-white/20 object-cover rounded-xl hover:scale-110 transition-transform'
         src={image}
-        alt=''
+        alt='image of project'
       />
-        <ul class='flex justify-end mr-2 mt-1'  >
-          <li class='flex items-center mb-1'>
-            <button
-              class={`flex gap-x-2 ml-2 rounded-full text-xs py-1 px-2 hover:bg-gray-600 hover:text-black/80 ${links?.class}`}
-
-            >
-              <a href={links?.url} target='_blank' rel='noopener noreferrer'>
-                {links && <links.icon class='size-4 rounded-full' />}
-              </a>
-              {links?.nameWeb}
-            </button>
-          </li>
-          <li class='flex items-center mb-1'>
-             <button
-              class={`flex gap-x-2 ml-2 rounded-full text-xs py-1 px-2 hover:bg-gray-600 hover:text-black/80 ${links?.class}`}
-
-            >
-              <a href={links?.url} target='_blank' rel='noopener noreferrer'>
-                {links && <links.iconWeb class='size-4 rounded-full' />}
-              </a>
-              {links?.nameWeb}
-             </button>
-          </li>
-        </ul>
+      <ul class='flex justify-end mr-2 mt-1'>
+        <li class='flex items-center mb-1'>
+          <a
+            class={`flex gap-x-2 ml-2 mt-2 rounded-full text-xs py-1 px-2 hover:bg-gray-600 hover:text-black/80 ${links?.class}`}
+            href={links?.github}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {links && <links.icon class='size-4 rounded-full' />}
+            {links?.nameWeb}
+          </a>
+        </li>
+        <li class='flex items-center mb-1'>
+          <a
+            class={`flex gap-x-2 mt-2 ml-2 rounded-full text-xs py-1 px-2 hover:bg-gray-600 hover:text-black/80 ${links?.class}`}
+            href={links?.url}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {links && <links.iconWeb class='size-4 rounded-full' />}
+            {links?.nameWeb}
+          </a>
+        </li>
+      </ul>
     </article>
   ))
 }
