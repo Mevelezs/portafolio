@@ -3,14 +3,17 @@
 ---
 
 <header
-  id="landing-header" 
-  class='flex items-center bg-[#391C84]/10 backdrop-blur-sm fixed z-20 top-0 py-4 px-24  w-full justify-evenly'
-  >
-  <img 
-    class = "rounded-full size-10 object-cover"
-    src='https://avatars.githubusercontent.com/u/91708303?s=400&u=96e991a305db44cfc60a443ff9e7a03c7c53f6cb&v=4' alt='This is the image of Mauricio' />
+  id='landing-header'
+  class='flex items-center bg-[#391C84]/10 backdrop-blur-sm fixed z-20 top-0 py-4 px-24 w-full justify-evenly'>
+  <a href='#sobre-mi'>
+  <img
+    class='rounded-full size-10 object-cover hover:scale-150 transition-transform duration-500'
+    src='/foto.jpg'
+    alt='This is the image of Mauricio'/>
+  </a>
   <nav>
-    <ul class='flex text-md font-semibold opacity-90 [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4'>
+    <ul
+      class='flex text-md font-semibold opacity-90 [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4'>
       <li><a href='#top'>Inicio</a></li>
       <li><a href='#experiencia'>Experiencia</a></li>
       <li><a href='#proyectos'>Proyectos</a></li>
@@ -29,31 +32,30 @@
       transition-all duration-500 
       ease-in-out opacity-0
       -z-10
-    `}
-  >
+    `}>
   </div>
 </header>
 
 <script>
-  const listItem = document.querySelectorAll("#landing-header li") 
-  const menuBackbrop = document.querySelector("#menu-backdrop") as HTMLElement
+  const listItem = document.querySelectorAll("#landing-header li");
+  const menuBackbrop = document.querySelector("#menu-backdrop") as HTMLElement;
 
   listItem.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-      const {left, width, top, height} = item.getBoundingClientRect();
+      const { left, width, top, height } = item.getBoundingClientRect();
 
-      menuBackbrop.style.setProperty('--left', `${left}px`)
-      menuBackbrop.style.setProperty('--width', `${width}px`)
-      menuBackbrop.style.setProperty('--top', `${top}px`)
-      menuBackbrop.style.setProperty('--height', `${height}px`)
+      menuBackbrop.style.setProperty("--left", `${left}px`);
+      menuBackbrop.style.setProperty("--width", `${width}px`);
+      menuBackbrop.style.setProperty("--top", `${top}px`);
+      menuBackbrop.style.setProperty("--height", `${height}px`);
 
       menuBackbrop.style.opacity = "1";
-      menuBackbrop.style.visibility = "visible"
-    })
+      menuBackbrop.style.visibility = "visible";
+    });
 
-    item.addEventListener('mouseleave', () => {
+    item.addEventListener("mouseleave", () => {
       menuBackbrop.style.opacity = "0";
-      menuBackbrop.style.visibility = "hidden"
-    })
+      menuBackbrop.style.visibility = "hidden";
+    });
   });
 </script>

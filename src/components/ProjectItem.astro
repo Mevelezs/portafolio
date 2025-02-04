@@ -4,13 +4,49 @@ import Web from "./icons/Web.astro";
 import JavaScript from "./logosTech/JavaScript.astro";
 import Nextjs from "./logosTech/Nextjs.astro";
 import React from "./logosTech/React.astro";
+import Node from "./logosTech/Node.astro";
+import Express from "./logosTech/Express.astro";
+import Badge from "./Badge.astro";
+import CssLogo from "./logosTech/CssLogo.astro";
+import HtmlLogo from "./logosTech/Html.astro";
+import Tailwind from "./logosTech/Tailwind.astro";
+import AstroLogo from "./logosTech/AstroLogo.astro";
 
 const DATA_LINKS = {
   project_1: {
-    nameWeb: "Ir al sitio web",
+    code: "Ver código",
     github: "https://github.com/Grupo5Henry",
     icon: Github,
+    nameWeb: "Ir al sitio web",
     url: "https://front-wheat-gamma.vercel.app",
+    iconWeb: Web,
+    class: "bg-black/20",
+  },
+  project_2: {
+    code: "Ver código",
+    github: "https://github.com/Mevelezs/PI-Coutries",
+    icon: Github,
+    nameWeb: "Ir al sitio web",
+    url: "https://pi-coutries-git-master-mevelezs.vercel.app/",
+    iconWeb: Web,
+    class: "bg-black/20",
+  },
+  project_3: {
+    code: "Ver código",
+    github: "https://github.com/Mevelezs/servicio-tecnico",
+    icon: Github,
+    nameWeb: "Ir al sitio web",
+    url: "https://servicio-tecnico-9shx80yxv-mevelezs-projects.vercel.app/",
+    iconWeb: Web,
+    class: "bg-black/20",
+  },
+  project_4: {
+    code: "Ver código",
+    github:
+      "https://github.com/Mevelezs/react/tree/master/project/06-shopping-cart",
+    icon: Github,
+    nameWeb: "Ir al sitio web",
+    url: "https://servicio-tecnico-9shx80yxv-mevelezs-projects.vercel.app/",
     iconWeb: Web,
     class: "bg-black/20",
   },
@@ -31,55 +67,103 @@ const TAGS = {
     class: "bg-black/20",
     icon: Nextjs,
   },
+  Node: {
+    name: "Node.js",
+    class: "bg-black/20",
+    icon: Node,
+  },
+  Express: {
+    name: "Express.js",
+    class: "bg-black/20",
+    icon: Express,
+  },
+  Css: {
+    name: "CSS",
+    class: "bg-black/20",
+    icon: CssLogo,
+  },
+  Html: {
+    name: "HTML",
+    class: "bg-black/20",
+    icon: HtmlLogo,
+  },
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-black/20",
+    icon: Tailwind,
+  },
+  AstroLogo: {
+    name: "Astro",
+    class: "bg-black/20",
+    icon: AstroLogo,
+  },
 };
 const PROJECT_CONTENT = [
   {
     id: 1,
-    name: "Project One",
+    name: "Techno Trade",
     description:
-      "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
-    image: "/foto.jpg",
+      "E-commers de productos tecnológicos, consumo de API externa integrado, pasaleral de pagos, autenticación con terceros, logIn, cariito de compras, favoritos...",
+    image: "/Techno_Trade.jpeg",
     links: DATA_LINKS.project_1,
-    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
+    tags: [
+      TAGS.React,
+      TAGS.JavaScript,
+      TAGS.Node,
+      TAGS.Express,
+      TAGS.Css,
+      TAGS.Html,
+    ],
   },
   {
-    id: 1,
-    name: "Project One",
+    id: 2,
+    name: "App de bandera de países",
     description:
-      "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
-    image: "/foto.jpg",
-    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
+      "Diseño de SPA con consumo de API externa, filtrado por nombre o por continente, ordenado por cantidad de habitantes y A-Z, creacion de actividades turisticas para cada país y filtado por las mismas y paginado.",
+    image: "/Api_países.png",
+    links: DATA_LINKS.project_2,
+    tags: [
+      TAGS.React,
+      TAGS.JavaScript,
+      TAGS.Node,
+      TAGS.Express,
+      TAGS.Css,
+      TAGS.Html,
+    ],
   },
   {
-    id: 1,
-    name: "Project One",
+    id: 3,
+    name: "App de bandera de países",
     description:
-      "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
-    image: "/foto.jpg",
-    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
+      "Creé una web para un servicio de reparación de electrodomésticos como proyecto freelance. Usé Astro para hacerla rápida, Tailwind CSS para un diseño limpio y moderno, y JavaScript para darle interactividad. Fue un reto divertido que me permitió combinar mis habilidades técnicas con la necesidad del cliente de tener una página clara y funcional.",
+    image: "/Servicio_tecnico.png",
+    links: DATA_LINKS.project_3,
+    tags: [TAGS.AstroLogo, TAGS.JavaScript, TAGS.Tailwind, TAGS.Html],
   },
   {
-    id: 1,
-    name: "Project One",
+    id: 4,
+    name: "Shopping cart",
     description:
-      "This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project. This is the first project.",
-    image: "/foto.jpg",
-    tags: [TAGS.React, TAGS.JavaScript, TAGS.React, TAGS.JavaScript],
+      "Desarrollo un carrito de compras rasponsive, el cual usa un mock de datos en formato json para simular una api, se enfatiza en los filtros por precio y categoría y la sincronización de los componentes por medio de unestado global...",
+    image: "/shopping_cart.png",
+    links: DATA_LINKS.project_4,
+    tags: [TAGS.React, TAGS.JavaScript, TAGS.Html, TAGS.Css],
   },
 ];
 ---
 
 {
   PROJECT_CONTENT.map(({ name, description, image, tags, links }) => (
-    <article class='border-solid h-96 border border-indigo-600/15 rounded-xl'>
-      <h3 class='text-xl font-semibold m-2'>{name}</h3>
-      <p class='text-sm  m-2 text-pretty'>{description}</p>
+    <article class='border-solid h-96 border border-indigo-600/15 rounded-xl mb-4'>
+      <h3 class='text-xl font-semibold mt-4'>{name}</h3>
+      <p class='text-sm  m-2 text-pretty italic text-green-100'>
+        {description}
+      </p>
       <ul class='grid grid-cols-IC gap-x-2 mt-1'>
         {tags?.map((tag) => (
           <li class='flex items-center mb-1'>
             <span
-              class={`flex gap-x-2 ml-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
-            >
+              class={`flex gap-x-2 ml-2 rounded-full text-xs py-1 px-2 ${tag.class}`}>
               <tag.icon class='size-4 rounded-full' />
               {tag.name}
             </span>
@@ -98,10 +182,9 @@ const PROJECT_CONTENT = [
             class={`flex gap-x-2 ml-2 mt-2 rounded-full text-xs py-1 px-2 hover:bg-gray-600 hover:text-black/80 ${links?.class}`}
             href={links?.github}
             target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             {links && <links.icon class='size-4 rounded-full' />}
-            {links?.nameWeb}
+            {links?.code}
           </a>
         </li>
         <li class='flex items-center mb-1'>
@@ -109,8 +192,7 @@ const PROJECT_CONTENT = [
             class={`flex gap-x-2 mt-2 ml-2 rounded-full text-xs py-1 px-2 hover:bg-gray-600 hover:text-black/80 ${links?.class}`}
             href={links?.url}
             target='_blank'
-            rel='noopener noreferrer'
-          >
+            rel='noopener noreferrer'>
             {links && <links.iconWeb class='size-4 rounded-full' />}
             {links?.nameWeb}
           </a>
