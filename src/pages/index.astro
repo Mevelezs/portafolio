@@ -23,7 +23,8 @@ import Profile from "@/components/icons/Profile.astro";
   title='Portfolio de Mauricio Vélez - Full Stack Web Developer'
   description='Mauricio Vélez es un full stack web developer con experiencia en desarrollo full stack con con pasión por el back-end. Especializado en crear aplicaciones de gran calidad.'>
   <main>
-    <SectionContainer class='mt-64'>
+    <SectionContainer
+      class='mt-64 sm:ml-4 sm:mr-4 sm:mt-20 sm:mb-20 sm:pb-20 sm:pt-20'>
       <h1 class='text-white text-3xl font-bold flex flex-row gap-x-4 pb-8'>
         Hola, soy Mauricio <a
           href='https://www.linkedin.com/in/mauricio-velez-solis/'
@@ -34,8 +35,12 @@ import Profile from "@/components/icons/Profile.astro";
         >
       </h1>
       <h2 class='text-[18px]'>
-        <span class='text-fuchsia-400'>Desarrollador full stack web.</span>
-        <span class='text-zinc-100'
+        <span
+          class='text-fuchsia-400 sm:text-ls sm:flex sm:center sm:mr-4 sm:g-x-16'
+          >Desarrollador full stack web.</span
+        >
+        <span
+          class='text-zinc-100 sm:text-sm sm:flex sm:center sm:mr-4 sm:g-x-16'
           >Soy un Desarrollador Web que encuentra alegría en la tecnología y en
           construir soluciones que impacten positivamente. Mi curiosidad y
           creatividad me llevan a explorar nuevas formas de resolver problemas,
@@ -89,14 +94,14 @@ import Profile from "@/components/icons/Profile.astro";
       </Projects>
     </SectionContainer>
 
-    <SectionContainer id='sobre-mi' class='mt-40 mb-16 py-20'>
+    <SectionContainer id='sobre-mi' class='mt-40 mb-16 py-20 sm:ml-2 sm:mr-2'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Profile class='size-6' />
         Sobre Mí
       </h2>
       <AboutMe />
     </SectionContainer>
-    <SectionContainer id='contacto' class='mt-20 mb-16 py-20'>
+    <SectionContainer id='contacto' class='mt-20 mb-16 py-20 sm:ml-2 sm:mr-2'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Mail class='size-6' />
         Contacto
