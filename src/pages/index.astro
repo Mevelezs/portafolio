@@ -24,7 +24,7 @@ import Profile from "@/components/icons/Profile.astro";
   description='Mauricio Vélez es un full stack web developer con experiencia en desarrollo full stack con con pasión por el back-end. Especializado en crear aplicaciones de gran calidad.'>
   <main>
     <SectionContainer
-      class='mt-64 sm:ml-4 sm:mr-4 sm:mt-20 sm:mb-20 sm:pb-20 sm:pt-20'>
+      class='mt-64 max-sm:ml-4 max-sm:mr-4 max-sm:mt-20 max-sm:mb-20 max-sm:pb-20'>
       <h1 class='text-white text-3xl font-bold flex flex-row gap-x-4 pb-8'>
         Hola, soy Mauricio <a
           href='https://www.linkedin.com/in/mauricio-velez-solis/'
@@ -36,11 +36,11 @@ import Profile from "@/components/icons/Profile.astro";
       </h1>
       <h2 class='text-[18px]'>
         <span
-          class='text-fuchsia-400 sm:text-ls sm:flex sm:center sm:mr-4 sm:g-x-16'
+          class='text-fuchsia-400 max-sm:text-ls max-sm:flex max-sm:center max-sm:mr-4 max-sm:ml-2'
           >Desarrollador full stack web.</span
         >
         <span
-          class='text-zinc-100 sm:text-sm sm:flex sm:center sm:mr-4 sm:g-x-16'
+          class='text-zinc-100 max-sm:text-xs max-sm:flex max-sm:center max-sm:mr-4 max-sm:ml-2'
           >Soy un Desarrollador Web que encuentra alegría en la tecnología y en
           construir soluciones que impacten positivamente. Mi curiosidad y
           creatividad me llevan a explorar nuevas formas de resolver problemas,
@@ -84,7 +84,7 @@ import Profile from "@/components/icons/Profile.astro";
 
     <SectionContainer
       id='proyectos'
-      class='mt-40 py-20 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-00 p-2border-gray-300 p-4 w-full'>
+      class='mt-40 py-20 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-00 p-2 border-gray-300 p-4 w-full'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Code class='size-7' />
         Proyectos
@@ -94,14 +94,14 @@ import Profile from "@/components/icons/Profile.astro";
       </Projects>
     </SectionContainer>
 
-    <SectionContainer id='sobre-mi' class='mt-40 mb-16 py-20 sm:ml-2 sm:mr-2'>
+    <SectionContainer id='sobre-mi' class='mt-40 mb-16 py-20 max-sm:ml-2 max-sm:mr-2'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Profile class='size-6' />
         Sobre Mí
       </h2>
       <AboutMe />
     </SectionContainer>
-    <SectionContainer id='contacto' class='mt-20 mb-16 py-20 sm:ml-2 sm:mr-2'>
+    <SectionContainer id='contacto' class='mt-20 mb-16 py-20 max-sm:ml-2 max-sm:mr-2'>
       <h2 class='text-xl font-semibold mb-10 flex gap-x-3'>
         <Mail class='size-6' />
         Contacto
