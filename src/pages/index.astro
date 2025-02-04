@@ -11,7 +11,7 @@ import SocialPill from "@/components/SocialPill.astro";
 
 import BriefCase from "@/components/icons/BriefCase.astro";
 import Code from "@/components/icons/Code.astro";
-import Contact from "@/components/Contact.astro"
+import Contact from "@/components/Contact.astro";
 import Curriculum from "@/components/icons/Curriculum.astro";
 import Github from "@/components/icons/Github.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
@@ -21,8 +21,7 @@ import Profile from "@/components/icons/Profile.astro";
 
 <Layout
   title='Portfolio de Mauricio Vélez - Full Stack Web Developer'
-  description='Mauricio Vélez es un full stack web developer con experiencia en desarrollo full stack con con pasión por el back-end. Especializado en crear aplicaciones de gran calidad.'
->
+  description='Mauricio Vélez es un full stack web developer con experiencia en desarrollo full stack con con pasión por el back-end. Especializado en crear aplicaciones de gran calidad.'>
   <main>
     <SectionContainer class='mt-64'>
       <h1 class='text-white text-3xl font-bold flex flex-row gap-x-4 pb-8'>
@@ -57,7 +56,7 @@ import Profile from "@/components/icons/Profile.astro";
           <Mail class='size-5' />
           serketh7@gmail.com
         </SocialPill>
-         <SocialPill href='./me.jpeg' download = 'CV_Mauricio_Vélez'>
+        <SocialPill href='./me.jpeg' download='CV_Mauricio_Vélez'>
           <Curriculum class='size-5' />
           Descargar CV
         </SocialPill>
@@ -65,7 +64,9 @@ import Profile from "@/components/icons/Profile.astro";
       <SliderTech />
     </SectionContainer>
 
-    <SectionContainer id='experiencia' class='py-20 '>
+    <SectionContainer
+      id='experiencia'
+      class='py-20 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-00 p-2border-gray-300 p-4 w-full'>
       <h2 class='text-xl font-semibold mb-2 flex gap-x-3'>
         <BriefCase />
         Experiencia
